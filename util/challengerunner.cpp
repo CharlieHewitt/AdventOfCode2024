@@ -13,7 +13,7 @@ namespace
    {
       auto output = std::string{"day "};
 
-      output += challenge.day;
+      output += std::to_string(challenge.day);
       output += " part ";
 
       switch (challenge.part)
