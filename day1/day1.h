@@ -1,5 +1,6 @@
 #pragma once
 #include "util/iday.h"
+#include <vector>
 
 namespace advent
 {
@@ -13,6 +14,11 @@ namespace advent
       // --- IDay
       auto runPartOne() noexcept -> void final;
       auto runPartTwo() noexcept -> void final;
-   
+
+      auto loadData() noexcept -> void;
+      
+
+      std::vector<int> m_firstLocationIds{};
+      std::vector<int> m_secondLocationIds{};
    };
 }
