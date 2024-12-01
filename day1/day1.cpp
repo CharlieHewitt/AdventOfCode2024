@@ -25,15 +25,39 @@ auto Day1::runPartOne() noexcept -> void
    auto sortedFirstLocations = std::ranges::sort(m_firstLocationIds);
    auto sortedSecondLocations = std::ranges::sort(m_secondLocationIds);
 
-   auto val = std::transform_reduce(m_firstLocationIds.begin(), m_firstLocationIds.end(), m_secondLocationIds.begin(), 0, std::plus<>{}, [](int firstLocation, int secondLocation) {
-      return std::abs(firstLocation - secondLocation);
-      });
+   auto val = std::transform_reduce(
+      m_firstLocationIds.begin(),
+      m_firstLocationIds.end(),
+      m_secondLocationIds.begin(),
+      0,
+      std::plus<>{},
+      [](int firstLocation, int secondLocation) 
+      {
+         return std::abs(firstLocation - secondLocation);
+      }
+   );
 
+   std::cout << "Puzzle answer: " << val << "." << std::endl;
 }
 
-auto Day1::runPartTwo() noexcept -> void 
+auto Day1::runPartTwo() noexcept -> void
 {
    std::cout << "That time of year again." << std::endl;
+
+   loadData();
+
+   auto sortedFirstLocations = std::ranges::sort(m_firstLocationIds);
+   auto sortedSecondLocations = std::ranges::sort(m_secondLocationIds);
+
+   auto view = m_firstLocationIds | std::views::transform([this](auto const i) { return i * std::ranges::count(m_secondLocationIds, i); });
+
+   // This had to be an int64 to avoid some conversion compiler warnings
+   auto initialValue = uint64_t{ 0 };
+
+   auto sum = std::accumulate(view.begin(), view.end(), initialValue);
+
+   std::cout << "Puzzle answer: " << sum << "." << std::endl;
+
 }
 
 auto Day1::loadData() noexcept -> void
