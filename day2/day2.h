@@ -4,11 +4,11 @@
 
 namespace advent
 {
-   class Day1 final : public IDay
+   class Day2 final : public IDay
    {
-   public:
-      explicit Day1() = default;
-      ~Day1() final = default;
+   public: 
+      explicit Day2() = default;
+      ~Day2() final = default;
 
    private:
       // --- IDay
@@ -16,9 +16,8 @@ namespace advent
       auto runPartTwo() noexcept -> void final;
 
       auto loadData() noexcept -> void;
-      
 
-      std::vector<int> m_firstLocationIds{};
-      std::vector<int> m_secondLocationIds{};
+      std::vector<std::vector<int>> m_values{};
+
    };
 }

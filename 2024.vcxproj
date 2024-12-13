@@ -131,12 +131,20 @@
   <ItemGroup>
     <ClCompile Include="2024.cpp" />
     <ClCompile Include="day1\day1.cpp" />
+    <ClCompile Include="day2\day2.cpp" />
+    <ClCompile Include="day3\day3.cpp" />
+    <ClCompile Include="day4\day4.cpp" />
+    <ClCompile Include="day5\day5.cpp" />
     <ClCompile Include="util\challengerunner.cpp" />
     <ClCompile Include="util\dayfactory.cpp" />
     <ClCompile Include="util\filereader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="day1\day1.h" />
+    <ClInclude Include="day2\day2.h" />
+    <ClInclude Include="day3\day3.h" />
+    <ClInclude Include="day4\day4.h" />
+    <ClInclude Include="day5\day5.h" />
     <ClInclude Include="util\challengerunner.h" />
     <ClInclude Include="util\dayfactory.h" />
     <ClInclude Include="util\filereader.h" />
@@ -147,6 +155,25 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <RootFolder Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</RootFolder>
     </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="input\day2.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="input\__day2.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="input\day3.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="input\day4.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="input\__day4.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="input\day5_manuals.txt" />
+    <CopyFileToFolders Include="input\day5_rules.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

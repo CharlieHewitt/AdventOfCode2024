@@ -30,6 +30,18 @@
     <ClCompile Include="day1\day1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="day2\day2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="day3\day3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="day4\day4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="day5\day5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="util\filereader.h">
@@ -47,8 +59,27 @@
     <ClInclude Include="day1\day1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="day2\day2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="day3\day3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="day4\day4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="day5\day5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="input\day1.txt" />
+    <CopyFileToFolders Include="input\day2.txt" />
+    <CopyFileToFolders Include="input\__day2.txt" />
+    <CopyFileToFolders Include="input\day3.txt" />
+    <CopyFileToFolders Include="input\day4.txt" />
+    <CopyFileToFolders Include="input\__day4.txt" />
+    <CopyFileToFolders Include="input\day5_manuals.txt" />
+    <CopyFileToFolders Include="input\day5_rules.txt" />
   </ItemGroup>
 </Project>
